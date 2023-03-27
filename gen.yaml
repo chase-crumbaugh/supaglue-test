@@ -1,9 +1,14 @@
 configVersion: 1.0.0
+management:
+  docChecksum: 580581d05c2e0bfeebe49cfcefe93d08
+  docVersion: 0.6.0
+  speakeasyVersion: 1.18.9
+  generationVersion: 2.16.4
 generation:
   telemetryEnabled: false
   sdkClassName: SDK
   sdkFlattening: false
   singleTagPerOp: false
 go:
-  version: ""
+  version: 1.0.0
   packageName: supaglue
