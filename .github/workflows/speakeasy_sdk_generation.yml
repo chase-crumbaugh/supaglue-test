@@ -7,8 +7,6 @@ on:
         description: "Force the generation of the SDKs"
         type: boolean
         default: false
-  schedule:
-    - cron: 0 0 * * * # Runs every day at midnight
 
 jobs:
   generate:
@@ -16,10 +14,11 @@ jobs:
     with:
       force: ${{ github.event.inputs.force }}
       speakeasy_version: latest
-      openapi_doc_location: https://prod.speakeasyapi.dev/v1/apis/test-2-27/version/v1/schema/download
+      openapi_doc_location: https://dev.speakeasyapi.dev/v1/apis/registry/version/v1.0.0/schema/download
       openapi_doc_auth_header: x-api-key
       languages: |-
         - go
+      mode: pr
     secrets:
       speakeasy_api_key: ${{ secrets.SPEAKEASY_PROD_API_KEY }}
       github_access_token: ${{ secrets.GITHUB_TOKEN }}
