@@ -11,4 +11,4 @@ generation:
   singleTagPerOp: false
 go:
   version: ""
-  packageName: registry2
+  packageName: registry
